@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form.FormLogin"
+    android:background="@drawable/shape_degrade"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:hint="E-mail"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edit_text"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+
+        />
+    <EditText
+        android:id="@+id/edit_senha"
+        android:hint="Senha"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edit_text"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="numberPassword"
+        android:padding="20dp"
+        />
+
+
+    <Button
+        android:id="@+id/button_login"
+        android:text="Entrar"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/AV"
+        app:cornerRadius="32dp"
+        />
+
+    <TextView
+        android:text="Crie uma conta clicando aqui!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        />
+</LinearLayout>
