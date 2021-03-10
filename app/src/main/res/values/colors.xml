@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Roxo">#673AB7</color>
     <color name="AV">#00BCD4</color>
-    <color name="incolor">#0000BCD4</color>
+    <color name="red">#F44336</color>
 
 
 </resources>

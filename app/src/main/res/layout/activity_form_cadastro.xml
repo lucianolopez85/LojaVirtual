@@ -6,12 +6,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/form_login"
+        android:id="@+id/form_cadastro"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Form.FormLogin"
+        tools:context=".Form.FormCadastro"
         android:background="@drawable/shape_degrade"
         android:orientation="vertical">
 
@@ -41,22 +41,10 @@
             android:inputType="numberPassword"
             android:padding="20dp"
             />
-        <TextView
-            android:id="@+id/msg_erro_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="@color/red"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="5dp"
-            />
 
         <Button
-            android:id="@+id/button_login"
-            android:text="Entrar"
+            android:id="@+id/btn_cadastrar"
+            android:text="Cadastrar"
             android:textAllCaps="false"
             android:textSize="18sp"
             android:layout_width="match_parent"
@@ -67,20 +55,9 @@
             android:padding="10dp"
             android:backgroundTint="@color/AV"
             app:cornerRadius="32dp"
-            />
-
-        <TextView
-            android:id="@+id/text_cadastrar_conta"
-            android:text="Crie uma conta clicando aqui!"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:fontFamily="sans-serif-black"
             android:layout_marginBottom="35dp"
             />
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
