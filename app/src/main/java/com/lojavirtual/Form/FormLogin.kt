@@ -1,21 +1,17 @@
 package com.lojavirtual.Form
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import android.widget.Toast
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.lojavirtual.R
 import com.lojavirtual.TelaPrincipal
 import com.lojavirtual.databinding.ActivityFormLoginBinding
-import kotlinx.android.synthetic.main.activity_form_cadastro.*
 import kotlinx.android.synthetic.main.activity_form_login.*
-import kotlinx.android.synthetic.main.activity_form_login.edit_email
-import kotlinx.android.synthetic.main.activity_form_login.edit_senha
 
 class FormLogin : AppCompatActivity() {
 
@@ -31,7 +27,7 @@ class FormLogin : AppCompatActivity() {
         VerificarUsuarioLogado()
 
         binding.textCadastrarConta.setOnClickListener {
-            val intent = Intent(this, Form_cadastro::class.java)
+            val intent = Intent(this, FormCadastro::class.java)
             startActivity(intent)
         }
 
@@ -58,7 +54,9 @@ class FormLogin : AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,senha).addOnCompleteListener{
             if(it.isSuccessful) { // se usuário foi logado com sucesso
                 Toast.makeText(this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show() //manda a msg
-                IrParaTelaPrincipal() // vai pra outra tela
+                frameLayout.visibility = View.VISIBLE  // TORNA O FRAMELAYOUT VISIVEL
+                Handler().postDelayed({IrParaTelaPrincipal()}, 2000) //METODO PARA TARDAR A ABERTURA DA OUTRA TELA
+                // IrParaTelaPrincipal()  vai pra outra tela
             }
         }.addOnFailureListener {
 

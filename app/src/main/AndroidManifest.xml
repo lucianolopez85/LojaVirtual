@@ -13,7 +13,7 @@
             android:name=".TelaPrincipal"
             android:label="@string/title_activity_tela_principal"
             android:theme="@style/Theme.LojaVirtual.NoActionBar"></activity>
-        <activity android:name=".Form.Form_cadastro" />
+        <activity android:name=".Form.FormCadastro" />
         <activity android:name=".Form.FormLogin" />
         <activity android:name=".MainActivity" />
         <activity

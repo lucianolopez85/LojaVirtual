@@ -4,14 +4,20 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.lojavirtual.R
 import kotlinx.android.synthetic.main.activity_form_cadastro.*
 import com.google.android.material.snackbar.Snackbar
 import com.lojavirtual.TelaPrincipal
+import kotlinx.android.synthetic.main.activity_form_cadastro.edit_email
+import kotlinx.android.synthetic.main.activity_form_cadastro.edit_senha
+import kotlinx.android.synthetic.main.activity_form_cadastro.frameLayout
+import kotlinx.android.synthetic.main.activity_form_login.*
 
-class Form_cadastro : AppCompatActivity() {
+class FormCadastro : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +44,8 @@ class Form_cadastro : AppCompatActivity() {
         // MENSAGEM PADRÃO
         // Toast.makeText(this,"Ensira seu e-mail e senha", Toast.LENGTH_SHORT).show() //ENVIA MENSAGEM... LENGTH_SHORT(velocidade) .show (executar)
 
+
+
         }else{ // NÃO ESTA VAZIO
             // PEGA A INSTANCIA DO FIREBASE E CRIA UM USUÁRIO COM EMAIL E SENHA
             // .addOnCompleteListener { it. Task<AuthResult!>     <- recebe um objeto it (de autenticação)
@@ -45,7 +53,10 @@ class Form_cadastro : AppCompatActivity() {
 
                 if (it.isSuccessful){ // SE OBJETO IT QUE RECEBE A AUTENTICAÇÃO FOR UM SUCESSO
                     Toast.makeText(this,"Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show() //ENVIA MENSAGEM
-                    IrParaTelaLogin()
+                    frameLayout.visibility = View.VISIBLE  // TORNA O FRAMELAYOUT VISIVEL
+                    Handler().postDelayed({IrParaTelaprincipal()}, 2000) //METODO PARA TARDAR A ABERTURA DA OUTRA TELA
+                    // IrParaTelaPrincipal()  vai pra outra tela
+
                 }
             }.addOnFailureListener {
                 //SE O OBJETO NÃO FOI UM SUCESSO
@@ -53,7 +64,7 @@ class Form_cadastro : AppCompatActivity() {
             }
             }
         }
-        private fun IrParaTelaLogin(){
+        private fun IrParaTelaprincipal(){
             val intent = Intent(this, TelaPrincipal::class.java)
             startActivity(intent)
             finish()

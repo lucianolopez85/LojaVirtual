@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/form_cadastro"
@@ -60,4 +64,29 @@
 
     </LinearLayout>
 
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:background="@color/Roxo"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/white"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Carregando..."
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_marginTop="440dp"
+                android:fontFamily="sans-serif-black"
+                />
+
+        </FrameLayout>
+    </FrameLayout>
 </androidx.core.widget.NestedScrollView>
