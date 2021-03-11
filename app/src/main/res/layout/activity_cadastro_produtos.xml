@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinzaclaro"
+    tools:context=".Fragments.CadastroProdutos">
+
+
+    <ImageView
+        android:id="@+id/foto_produto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078"
+        app:srcCompat="@android:drawable/ic_media_next"
+        android:scaleType="centerCrop"
+        />
+
+    <Button
+        android:id="@+id/btn_selecionar_foto"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:backgroundTint="@color/black"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/foto_produto"
+        app:layout_constraintEnd_toEndOf="@+id/foto_produto"
+        app:layout_constraintStart_toStartOf="@+id/foto_produto"
+        app:layout_constraintTop_toTopOf="@+id/foto_produto" />
+
+    <EditText
+        android:id="@+id/edit_nome_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Nome"
+        android:textColor="@color/black"
+        android:background="@drawable/shape_edit_text"
+        android:padding="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_produto"
+        app:layout_constraintVertical_bias="0.080"
+        app:layout_constraintHorizontal_bias="1.0"
+        />
+
+    <EditText
+        android:id="@+id/edit_preço_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_edit_text"
+        android:hint="Preço"
+        android:padding="15dp"
+        android:text=""
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome_produto"
+        app:layout_constraintVertical_bias="0.040"
+        app:layout_constraintHorizontal_bias="0.0"
+
+
+        />
+
+    <Button
+        android:id="@+id/btn_cadastrar_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/Roxo"
+        android:fontFamily="sans-serif-black"
+        android:padding="13dp"
+        android:shadowColor="@color/red"
+        android:text="Cadastrar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_preço_produto"
+        app:layout_constraintVertical_bias="0.040" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

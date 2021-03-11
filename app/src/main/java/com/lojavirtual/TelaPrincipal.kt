@@ -20,6 +20,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.lojavirtual.Form.FormLogin
+import com.lojavirtual.Fragments.CadastroProdutos
 import com.lojavirtual.Fragments.Produtos
 
 class TelaPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -64,16 +65,19 @@ class TelaPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         }else if (id == R.id.nav_cadastrar_produto){
 
+            var intent = Intent(this, CadastroProdutos::class.java)
+            startActivity(intent)
 
         }else if (id == R.id.nav_contato){
 
+            enviarEmail()
 
         }
         val drawer =  findViewById<DrawerLayout>(R.id.drawer_layout)
         drawer.closeDrawer(GravityCompat.START)
         return true
     }
-    //FIM NAV BAR LATERAL
+    // FIM NAV BAR LATERAL
 
     // INICIO DESLOGAR
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -98,5 +102,23 @@ class TelaPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
     }
     //FIM DESLOGAR
 
+    //INICIO ENVIAR E-MAIL
+
+    private fun enviarEmail(){
+
+        val PACKAGEM_GOOGLEMAIL = "com.google.android.gm"
+        val email = Intent(Intent.ACTION_SEND) //ACTION_SEND <- AÇÃO DE ENVIAR E-MAIL
+        email.putExtra(Intent.EXTRA_EMAIL, arrayOf("")) //ENVIAR UM E-MAIL
+        email.putExtra(Intent.EXTRA_SUBJECT, "") //DEFINIR O ASSUNTO DO E-MAIL
+        email.putExtra(Intent.EXTRA_TEXT, "")//DEFINIR TEXTO
+
+        //CONFIGURAÇÃO de apps de envio de e-mail
+
+        email.type = "message/rec822" //DEFINIR QUE ABRA APLICATIVOS DE E-MAIL
+        email.setPackage(PACKAGEM_GOOGLEMAIL)
+        startActivity(Intent.createChooser(email, "Escolha o app de e-mail"))
+
+    }
+    //FIM ENVIAR E-MAIL
 
 }

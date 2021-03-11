@@ -57,11 +57,14 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.heinrichreimersoftware:material-intro:2.0.0'
-
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.xwray:groupie:2.1.0'
 
     //FIREBASE
     implementation platform('com.google.firebase:firebase-bom:26.5.0')
     implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
+    implementation 'com.google.firebase:firebase-firestore:22.1.0'
 
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:paddingBottom="10dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/foto_produto"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerCrop"
+        />
+    <TextView
+        android:id="@+id/edit_nome_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tênis da nike"
+        android:layout_toEndOf="@id/foto_produto"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:maxLength="50"
+        />
+    <TextView
+        android:id="@+id/edit_preco_produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R$ 249,99"
+        android:layout_below="@id/edit_nome_produto"
+        android:layout_toEndOf="@id/foto_produto"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:maxLength="50"
+        />
+
+</RelativeLayout>
